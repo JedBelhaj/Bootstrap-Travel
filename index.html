@@ -9,19 +9,13 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Optional custom CSS -->
+    <!-- Custom CSS for minimal styling -->
     <style>
         .hero {
-            background-image: url('https://picsum.photos/1920/1080');
+            background-image: url('img/hero.jpg');
             background-size: cover;
             background-position: center;
-            color: white;
-            min-height: 500px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            min-height: 600px;
         }
 
         .hero::before {
@@ -36,7 +30,6 @@
         }
 
         .hero .container {
-            position: relative;
             z-index: 2;
         }
     </style>
@@ -47,89 +40,58 @@
     <!-- HEADER -->
     <header class="bg-dark text-white p-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <a href="#"><img src="https://picsum.photos/50/50" alt="logo" style="max-height: 50px;"></a>
+            <a href="#"><img src="img/favicon.png" alt="logo" style="max-height: 50px;"></a>
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Home
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Home Classic</a></li>
-                                <li><a class="dropdown-item" href="#">Home Dark</a></li>
-                                <li><a class="dropdown-item" href="#">Home Parallax</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Pages
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPages">
-                                <li><a class="dropdown-item" href="#">About Us</a></li>
-                                <li><a class="dropdown-item" href="#">Destinations</a></li>
-                                <li><a class="dropdown-item" href="#">Destination Details</a></li>
-                                <li><a class="dropdown-item" href="#">Guides</a></li>
-                                <li><a class="dropdown-item" href="#">Gallery</a></li>
-                                <li><a class="dropdown-item" href="#">FAQ</a></li>
-                                <li><a class="dropdown-item" href="#">Error</a></li>
-                                <li><a class="dropdown-item" href="#">Sign Up / Sign In</a></li>
-                                <li><a class="dropdown-item" href="#">Booking</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDestination" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Destination
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownDestination">
-                                <li><a class="dropdown-item" href="#">New York</a></li>
-                                <li><a class="dropdown-item" href="#">London</a></li>
-                                <li><a class="dropdown-item" href="#">Paris</a></li>
-                                <li><a class="dropdown-item" href="#">Dubai</a></li>
-                                <li><a class="dropdown-item" href="#">Miami</a></li>
-                                <li><a class="dropdown-item" href="#">Amsterdam</a></li>
-                                <li><a class="dropdown-item" href="#">Chicago</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlogs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Blogs
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownBlogs">
-                                <li><a class="dropdown-item" href="#">Blog List</a></li>
-                                <li><a class="dropdown-item" href="#">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPackages" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Packages
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPackages">
-                                <li><a class="dropdown-item" href="#">Package List</a></li>
-                                <li><a class="dropdown-item" href="#">Package List Sidebar</a></li>
-                                <li><a class="dropdown-item" href="#">Package Details</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#popular-tours">Our Popular Tours</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#top-destinations">Our Top Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact-us">Contact Us</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-                <div class="d-flex">
-                <a href="#" class="btn btn-primary">Profile</a>
-            </div>
         </div>
     </header>
 
     <!-- HERO -->
-    <section class="hero">
-        <div class="container text-center">
+    <section class="hero d-flex flex-column justify-content-center align-items-center text-center text-white position-relative">
+        <div class="container position-relative z-2">
             <h1 class="display-3">Find Next Place To Visit</h1>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            <form class="row g-2 justify-content-center">
+                <div class="col-12 col-md-auto">
+                    <input type="text" class="form-control" placeholder="Destination">
+                </div>
+                <div class="col-12 col-md-auto">
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col-12 col-md-auto">
+                    <select class="form-select">
+                        <option selected>Select Tour Type</option>
+                        <option value="1">Adventure</option>
+                        <option value="2">Leisure</option>
+                        <option value="3">Romantic</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-auto">
+                    <button type="submit" class="btn btn-primary">Find Now</button>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -137,35 +99,32 @@
     <section id="about-us" class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="font-weight-bold">About Us</h2>
+                <h2 class="fw-bold">About Us</h2>
                 <p class="lead">Learn more about our company and values.</p>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-6">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
                 </div>
                 <div class="col-md-6">
-                    <img src="https://picsum.photos/500/300" alt="About Us Image" class="img-fluid">
+                    <img src="img/about.jpg" alt="About Us Image" class="img-fluid rounded">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT US -->
-
-
     <!-- POPULAR TOURS -->
-    <section class="py-5 bg-light">
+    <section id="popular-tours" class="py-5 bg-dark text-white">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="font-weight-bold">Our Popular Tours Type</h2>
+                <h2 class="fw-bold">Our Popular Tours</h2>
                 <p class="lead">Explore our most popular tours worldwide.</p>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img src="https://picsum.photos/id/1015/400/300" class="card-img-top" alt="Tour Image">
-                        <div class="card-body">
+                        <img src="img/popular1.jpg" class="card-img-top" alt="Tour Image">
+                        <div class="card-body text-center">
                             <h5 class="card-title">Cusco & Salkantay Trekking to Machu Picchu</h5>
                             <p class="card-text">From $250</p>
                             <a href="#" class="btn btn-primary">Explore Now</a>
@@ -174,8 +133,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img src="https://picsum.photos/id/1016/400/300" class="card-img-top" alt="Tour Image">
-                        <div class="card-body">
+                        <img src="img/popular2.jpg" class="card-img-top" alt="Tour Image">
+                        <div class="card-body text-center">
                             <h5 class="card-title">Family Tours of Taj Mahal, New Delhi India</h5>
                             <p class="card-text">From $250</p>
                             <a href="#" class="btn btn-primary">Explore Now</a>
@@ -184,32 +143,29 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img src="https://picsum.photos/id/1014/400/300" class="card-img-top" alt="Tour Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Casablanca Valley Wine Tasting Day Tours</h5>
+                        <img src="img/popular3.jpg" class="card-img-top" alt="Tour Image">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Morroco, Casablanca Valley Wine Tasting Day Tours</h5>
                             <p class="card-text">From $250</p>
                             <a href="#" class="btn btn-primary">Explore Now</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4">
-                <a href="#" class="btn btn-secondary">View All</a>
-            </div>
         </div>
     </section>
 
     <!-- TOP ATTRACTIONS -->
-    <section class="py-5">
+    <section id="top-destinations" class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="font-weight-bold">Top Attractions Destinations</h2>
+                <h2 class="fw-bold">Our Top Destinations</h2>
                 <p class="lead">Explore our top attractions to visit.</p>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img src="https://picsum.photos/id/1018/400/300" class="card-img-top" alt="Destination Image">
+                        <img src="img/destination1.jpg" class="card-img-top" alt="Destination Image">
                         <div class="card-body text-center">
                             <h5 class="card-title">Beauty of France</h5>
                             <p class="card-text">10 Tours Place</p>
@@ -218,7 +174,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img src="https://picsum.photos/id/1019/400/300" class="card-img-top" alt="Destination Image">
+                        <img src="img/destination2.jpg" class="card-img-top" alt="Destination Image">
                         <div class="card-body text-center">
                             <h5 class="card-title">London England</h5>
                             <p class="card-text">10 Tours Place</p>
@@ -227,7 +183,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img src="https://picsum.photos/id/1020/400/300" class="card-img-top" alt="Destination Image">
+                        <img src="img/destination3.jpg" class="card-img-top" alt="Destination Image">
                         <div class="card-body text-center">
                             <h5 class="card-title">Tokyo, Japan</h5>
                             <p class="card-text">10 Tours Place</p>
@@ -238,89 +194,66 @@
         </div>
     </section>
 
-    <!-- WHY TRAVEL WITH US -->
-    <section class="py-5 bg-light">
+    <!-- CONTACT US -->
+    <section id="contact-us" class="py-5 bg-dark text-white">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="font-weight-bold">Why Travel with Arid?</h2>
-                <p class="lead">Discover what makes us the best choice for your travel needs.</p>
-            </div>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="https://picsum.photos/100/100" alt="Icon" class="mb-3">
-                    <h5>Best Price Guaranteed</h5>
-                    <p>We guarantee the best prices on all our travel packages.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="https://picsum.photos/101/100" alt="Icon" class="mb-3">
-                    <h5>Best Travel Guide</h5>
-                    <p>Our experienced travel guides ensure a memorable journey.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="https://picsum.photos/102/100" alt="Icon" class="mb-3">
-                    <h5>Customer Care 24/7</h5>
-                    <p>Our customer support is available round the clock to assist you.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact-us" class="py-5 mb-5">
-        <div class="container">
-            <div class="text-center mb-5">  
-                <h2 class="font-weight-bold">Contact Us</h2>
+                <h2 class="fw-bold">Contact Us</h2>
                 <p class="lead">Get in touch with us for any inquiries or support.</p>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <form>
-                        <div class="mb-3">
-                            <label for="fullName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="fullName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <form class="w-100" style="max-width: 1000px;">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-dark text-white pt-5">
+    <footer class="footer bg-dark text-white py-2">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 text-center text-md-start">
-                    <h5 class="text-uppercase">About Us</h5>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <h5 class="text-uppercase">Quick Links</h5>
+                <div class="col-md">
+                    <h5 class="text-uppercase">Navigation</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">About Us</a></li>
-                        <li><a href="#" class="text-white">Destinations</a></li>
-                        <li><a href="#" class="text-white">Packages</a></li>
-                        <li><a href="#" class="text-white">Contact</a></li>
+                        <li><a href="#" class="text-secondary">About Company</a></li>
+                        <li><a href="#" class="text-secondary">Online Query</a></li>
+                        <li><a href="#" class="text-secondary">Become Partner</a></li>
+                        <li><a href="#" class="text-secondary">Help & Support</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 text-center text-md-end">
-                    <h5 class="text-uppercase">Follow Us</h5>
-                    <a href="#" class="btn btn-outline-light me-2"><i class="bi bi-whatsapp"></i></a>
-                    <a href="#" class="btn btn-outline-light me-2"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="btn btn-outline-light me-2"><i class="bi bi-pinterest"></i></a>
-                    <a href="#" class="btn btn-outline-light"><i class="bi bi-instagram"></i></a>
+                <div class="col-md">
+                    <h5 class="text-uppercase">Destinations</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary">Grand Switzerland</a></li>
+                        <li><a href="#" class="text-secondary">Beauty of Paris</a></li>
+                        <li><a href="#" class="text-secondary">United States</a></li>
+                        <li><a href="#" class="text-secondary">Wiesbaden Sea</a></li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <h5 class="text-uppercase">Contact Us</h5>
+                    <p class="text-secondary">3891 Ranchview Dr. Richardson, California 62639</p>
+                    <p class="text-secondary">+88 0123 6985</p>
+                    <p class="text-secondary">example@gmail.com</p>
                 </div>
             </div>
-            <div class="pt-3 mt-3 text-center border-top border-secondary">
-                <p class="mb-0 text-muted">&copy; 2024 Your Company</p>
-            </div>
+        </div>
+        <div class="pt-3 mt-3 border-top border-secondary text-center">
+            <p class="mb-0 text-secondary">&copy; 2024 NextGen Coding</p>
+            <a href="#" class="text-secondary">Privacy Policy</a> | <a href="#" class="text-secondary">Terms of Use</a>
         </div>
     </footer>
 
@@ -329,4 +262,6 @@
 
 </body>
 
-</html> 
+</html>
+
+
